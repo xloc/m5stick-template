@@ -47,3 +47,12 @@ server.onNotFound([](AsyncWebServerRequest *request){
 
 server.begin(); // non-blocking, main loop can be used to do whatever you want
 ```
+
+### custom partition
+from [here](https://community.platformio.org/t/how-to-change-partition-scheme-for-esp32/29687/5)
+```
+; platformio.ini
+board_build.flash_mode = qio
+board_build.f_flash = 80000000L
+board_build.partitions = partition.csv
+```
